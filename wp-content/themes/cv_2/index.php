@@ -9,7 +9,7 @@
 //     the_excerpt();
 // }
 
-
+get_header();
 
 
 $cats = get_categories();
@@ -21,7 +21,7 @@ foreach ($cats as $cat) {
    $posts = get_posts($args);
    $category_link = sprintf(
    '<a href="%1$s" alt="%2$s">%3$s</a>',
-    esc_url(get_category_link($cat->term_id)),
+   //  esc_url(get_category_link($cat->term_id)),
     esc_attr(sprintf(__('textdomain'), $cat->name)),
     esc_html($cat->name)
     );
@@ -34,11 +34,12 @@ foreach ($cats as $cat) {
         if (has_tag('New Tag')){
            echo "New Tag";
         }
-        edit_post_link();
+        if (has_tag('New Tag 2')){
+           echo "New Tag 2";
+        }
    }
 
    }
-
 // $categories = get_categories();
 // foreach ($categories as $category) {
 // $args = array('category'=>"$cat->cat_ID");
@@ -51,3 +52,4 @@ foreach ($cats as $cat) {
 // }+
 
 ?>
+<?php get_footer() ?>

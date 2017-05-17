@@ -1,0 +1,18 @@
+/* Theme Name: cv_2
+Author: romain
+Description: Theme CV.
+*/
+
+body {
+    background-color: lightyellow;
+    padding-top: 2em;
+}
+
+h1 {
+    color: lightgreen;
+    border: 2px dashed pink;
+}
+
+p {
+    color: brown;
+}
